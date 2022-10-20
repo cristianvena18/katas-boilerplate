@@ -1,0 +1,11 @@
+version: '3.1'
+services:
+  api:
+    build: .
+    container_name: kata2
+    hostname: kata2
+    volumes:
+      - ./:/usr/src/service/app
+      - /usr/src/service/app/node_modules
+    working_dir: /usr/src/service/app
+    command: 'yarn start'
